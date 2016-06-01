@@ -4,7 +4,7 @@ var add = function(number1, number2) {
   return number1 + number2;
 };
 
-var substract = function(number1, number2) {
+var subtract = function(number1, number2) {
   return number1 - number2;
 };
 
@@ -27,7 +27,15 @@ $(document).ready(function() {
 	});
 });
 
-
+$(document).ready(function() {
+	$("form#subtract").submit(function(event) {
+		event.preventDefault();
+		var number1 = parseInt($("#sub1").val());
+		var number2 = parseInt($("#sub2").val());
+		var result = subtract(number1, number2);
+		$("#output").text(result);
+	});
+});
 // var weight = parseInt(prompt("Enter your weight in lbs:"));
 // var height = parseInt(prompt("Enter your height in inches:"));
 // var result = bmi(weight, height);
