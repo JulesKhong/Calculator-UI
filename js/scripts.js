@@ -24,19 +24,19 @@ $(document).ready(function() {
 		var number2 = parseInt($("#input2").val());
     var operator = $("input:radio[name=operator]:checked").val();
     var result;
-    if (operator==="add"){
-      result = add (number1, number2);
-    } else if (operater ==="subtract"){
+    if (operator === "add"){
+      result = add(number1, number2);
+    } else if (operater === "subtract") {
       result = subtract(number1, number2);
     }
-    else if (operater ==="multiply"){
+    else if (operater === "multiply") {
       result = multiply(number1, number2);
     }
-    else (operater ==="divide"){
+    else if (operater === "divide"){
       result = divide(number1, number2);
   }
   $("#output").text(result);
-});
+  });
 });
 
 
